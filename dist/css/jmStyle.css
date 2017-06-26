@@ -1,0 +1,32 @@
+.verticle-mode {
+    -ms-writing-mode: tb-rl;
+        writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+.header {
+	height: 3.0rem;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 0.62963rem 0.518519rem 0;
+	background: url(../images/hdBg.png) repeat-x center / cover;
+}
+.header .logo {
+	display: inline-block;
+	width: 0.657407rem;
+	height: 1.092593rem;
+	background: url(../images/logo.png) no-repeat center / cover;
+}
+.hd-gwc > i {
+	display: inline-block;
+	width: 0.361111rem;
+	height: 0.388889rem;
+	text-align: center;
+	background: url(../images/i-shopping.png) no-repeat center / cover;
+}
+.hd-nav i {
+	display: inline-block;
+	width: 0.361111rem;
+	height: 0.388889rem;
+	background: url(../images/navBtn.png) no-repeat center / cover;
+}

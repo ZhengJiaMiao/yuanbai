@@ -1,0 +1,56 @@
+.header {
+	height: 3.0rem;
+	box-sizing: border-box;
+	padding: 0.62963rem 0.518519rem 0;
+	background: url(../images/hdBg.png) repeat-x center / cover;
+}
+.header .logo {
+	display: inline-block;
+	width: 0.657407rem;
+	height: 1.092593rem;
+	background: url(../images/logo.png) no-repeat center / cover;
+}
+.hd-gwc,
+.hd-nav {
+	display: block;
+	width: 0.361111rem;
+	margin-left: 0.277778rem;
+}
+.hd-gwc > p,
+.hd-nav > p {
+	width: 100%;
+	text-align: center;
+	margin-top: 0.277778rem;
+	font-size: 7px;
+	color: #fff
+}
+[data-dpr="2"] .hd-gwc > p,
+[data-dpr="2"] .hd-nav > p {
+	font-size: 14px;
+}
+[data-dpr="3"] .hd-gwc > p,
+[data-dpr="3"] .hd-nav > p  {
+	font-size: 21px;
+}
+.hd-gwc:hover,
+.hd-nav:hover {
+	text-decoration: none;
+}
+.hd-gwc > i,
+.hd-nav > i {
+	display: inline-block;
+	width: 0.361111rem;
+	height: 0.388889rem;
+	line-height: 0.388889rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	vertical-align: top;
+}
+.hd-gwc > i {
+	background-image: url(../images/i-shopping.png);
+}
+.hd-nav i {
+	background-image: url(../images/navBtn.png);
+}
