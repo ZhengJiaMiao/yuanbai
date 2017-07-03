@@ -19,6 +19,7 @@
 	</head>
 	
 	<body>
+		<!-- header start -->
 		<div class="header clearfix">
 			<a href="index.html" class="logo l"></a>
 			<div class="r hd-r">
@@ -32,5 +33,305 @@
 				</a>
 			</div>
 		</div>
+		<!-- header end -->
+
+		<!-- nav start -->
+		<div class="nav">
+			<div class="nav-bg"></div>
+			<div class="nav-box">
+				<div class="nav-hd">
+					<div class="nav-hd-inner">
+						<input type="text" value="" placeholder="搜索所有商品" />
+						<i class="i-search"></i>
+					</div>
+				</div>
+				<div class="nav-list-outer">
+					<ul class="nav-list">
+						<li class="nav-item">
+							<p class="nav-1">
+								<a href="">作者</a>
+								<i></i>
+							</p>
+							<ul class="nav-2">
+								<li><a href=""><span class="cn">白山陶瓷</span><span class="en">Hakusan</span></a></li>
+								<li><a href=""><span class="cn">目片千惠</span><span class="en">Chie Mekata</span></a></li>
+								<li><a href=""><span class="cn">小野哲平</span><span class="en">Teppei Ono</span></a></li>
+								<li><a href=""><span class="cn">佐藤胜久</span><span class="en">Ando Masanobo</span></a></li>
+								<li><a href=""><span class="cn">津田清和</span><span class="en">Tsuta Kiyokazu</span></a></li>
+								<li><a href=""><span class="cn">京都竹</span><span class="en">Nishikawa Saoshi</span></a></li>
+								<li><a href=""><span class="cn">久留米絣</span><span class="en">Mitoma Osama</span></a></li>
+								<li><a href=""><span class="cn">桦细工</span><span class="en">Takeshi Omura</span></a></li>
+								<li><a href=""><span class="cn">染司吉岡</span><span class="en">Tsuta Kyokazu</span></a></li>
+								<li><a href=""><span class="cn">西山芳浩</span><span class="en">Nishiyama Yoshihiro</span></a></li>
+								<li><a href=""><span class="cn">富贵堂</span><span class="en">Ryota Aoki</span></a></li>
+								<li><a href=""><span class="cn">香云纱</span><span class="en">Gambiered Canton Silk</span></a></li>
+								<li><a href=""><span class="cn">不惑</span><span class="en">Buhuo</span></a></li>
+								<li><a href=""><span class="cn">艸田正樹</span><span class="en">Masaki Kusada</span></a></li>
+								<li><a href=""><span class="cn">津田清河</span><span class="en">Kiyokazu Tsuda</span></a></li>
+								<li><a href=""><span class="cn">村木雄児</span><span class="en">Kuji Muraki</span></a></li>
+								<li><a href=""><span class="cn">五十岚裕贵</span><span class="en">Igarashi Yuki</span></a></li>
+								<li><a href=""><span class="cn">荒川尚也</span><span class="en">Naoyo Arakawa</span></a></li>
+								<li><a href=""><span class="cn">木村硝子</span><span class="en">Mucunxiaozi</span></a></li>
+								<li><a href=""><span class="cn">大中和典</span><span class="en">Oonaka Kazunori</span></a></li>
+							</ul>
+						</li>
+						<li class="nav-item onlyOne">
+							<p class="nav-1">
+								<a href="">品牌</a>
+							</p>
+						</li>
+						<li class="nav-item">
+							<p class="nav-1">
+								<a href="">材质</a>
+								<i></i>
+							</p>
+							<ul class="nav-2">
+								<li><a href=""><span class="cn">陶瓷</span><span class="en">Ceramic</span></a></li>
+								<li><a href=""><span class="cn">铁器</span><span class="en">Iron</span></a></li>
+								<li><a href=""><span class="cn">铜器</span><span class="en">Bronze</span></a></li>
+								<li><a href=""><span class="cn">木器</span><span class="en">Wood</span></a></li>
+								<li><a href=""><span class="cn">竹器</span><span class="en">Bamboo</span></a></li>
+								<li><a href=""><span class="cn">玻璃</span><span class="en">Glass</span></a></li>
+								<li><a href=""><span class="cn">织物</span><span class="en">Textile</span></a></li>
+							</ul>
+						</li>
+						<li class="nav-item onlyOne">
+							<p class="nav-1">
+								<a href="">展厅</a>
+							</p>
+						</li>
+						<li class="nav-item onlyOne">
+							<p class="nav-1">
+								<a href="">新闻</a>
+							</p>
+						</li>
+						<li class="nav-item onlyOne">
+							<p class="nav-1">
+								<a href="">客服</a>
+							</p>
+						</li>
+						<li class="nav-item onlyOne">
+							<p class="nav-1">
+								<a href="">订单</a>
+							</p>
+						</li>
+						<li class="nav-item onlyOne">
+							<p class="nav-1">
+								<a href="">会员</a>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				$(".hd-nav").on('click', function(event) {
+					$(".nav").addClass("cur");
+					$(".nav-box").stop(true).animate({
+						right: "0"
+					});
+					event.preventDefault();
+					/* Act on the event */
+				});
+				$(".nav-bg").click(function(event) {
+					$(".nav-box").stop(true).animate({
+						right: "-8.231481rem"
+					}, function() {
+						$(".nav").removeClass("cur");
+					});
+					/* Act on the event */
+				});
+				$(".nav-list .nav-item").each(function(index, el) {
+					$(this).click(function(event) {
+						if($(this).hasClass('open')) {
+							$(this).removeClass('open');
+							$(this).find(".nav-2").stop(true).slideUp();
+						} else {
+							$(this).addClass('open');
+							$(this).find(".nav-2").stop(true).slideDown();
+						}
+					});
+				});
+			});
+		</script>
+		<!-- nav end -->
+		
+		<!-- yb-bnr start -->
+		<div class="yb-bnr">
+			<!-- Swiper -->
+		    <div class="swiper-container">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide">
+		            	<img src="images/bnr01.png" />
+		            	<div class="verticle-mode txt">
+		            		推广生活中的艺术与设计<br />分享生活美学的乐趣
+		            	</div>
+		            </div>
+		            <div class="swiper-slide">
+			            <img src="images/bnr02.png" />
+			            <div class="verticle-mode txt">
+		            		推广生活中的艺术与设计<br />分享生活美学的乐趣
+		            	</div>
+		            </div>
+		            <div class="swiper-slide">
+			            <img src="images/bnr03.png" />
+			            <div class="verticle-mode txt">
+		            		推广生活中的艺术与设计<br />分享生活美学的乐趣
+		            	</div>
+		            </div>
+		        </div>
+		        <!-- Add Pagination -->
+		        <div class="swiper-pagination"></div>
+		    </div>
+		</div>
+		<script>
+	    var swiper = new Swiper('.yb-bnr .swiper-container', {
+	        pagination: '.yb-bnr .swiper-pagination',
+	        paginationClickable: true,
+	        autoplay: 5000
+	    });
+	    </script>
+		<!-- yb-bnr end -->
+
+		<!-- gotoNext start -->
+		<a href="javascript:void(0);" class="gotoNext">
+			<i></i>
+		</a>
+		<!-- gotoNext end -->
+
+		<!-- yb-ad start -->
+		<div class="yb-ad">
+			<div class="ad-item">
+				<img src="images/ad01.png" class="ad-bg" />
+				<div class="ad-inner ad-white">
+					<h2>推广生活中的艺术与设计<br />分享生活美学的乐趣</h2>
+					<p>和创园31间<br />2017年05月15日 下午3点</p>
+				</div>
+				<div class="line"></div>
+			</div>
+			<div class="ad-item">
+				<img src="images/ad02.png" class="ad-bg" />
+				<div class="ad-inner ad-black">
+					<h2>推广生活中的艺术与设计<br />分享生活美学的乐趣</h2>
+					<p>和创园31间<br />2017年05月15日 下午3点</p>
+				</div>
+				<div class="line ad-black"></div>
+			</div>
+			<div class="ad-item">
+				<img src="images/ad03.png" class="ad-bg" />
+				<div class="ad-inner ad-black">
+					<h2>推广生活中的艺术与设计<br />分享生活美学的乐趣</h2>
+					<p>和创园31间<br />2017年05月15日 下午3点</p>
+				</div>
+				<div class="line ad-black"></div>
+			</div>
+			<div class="ad-line"><p>更多新闻请关注元白微信公众号</p></div>
+		</div>
+		<!-- yb-ad end -->
+		
+		<!-- yb-separate start -->
+		<div class="yb-separate"></div>
+		<!-- yb-separate end -->
+
+		<!-- yb-product start -->
+		<div class="yb-product">
+			<div class="pro-hd">
+				<h2>最受欢迎的商品</h2>
+			</div>
+			<div class="product-box clearfix">
+				<a href="" class="product-item">
+					<img src="images/pro01.png" />
+					<h2>弯把壶</h2>
+					<h2>大中和典</h2>
+					<p>RMB 2680</p>
+				</a>
+				<a href="" class="product-item">
+					<img src="images/pro02.png" />
+					<h2>弯把壶</h2>
+					<h2>大中和典</h2>
+					<p>RMB 1880</p>
+				</a>
+				<a href="" class="product-item">
+					<img src="images/pro03.png" />
+					<h2>弯把壶</h2>
+					<h2>大中和典</h2>
+					<p>RMB 1880</p>
+				</a>
+				<a href="" class="product-item">
+					<img src="images/pro04.png" />
+					<h2>侧柄壶</h2>
+					<h2>大中和典</h2>
+					<p>RMB 1880</p>
+				</a>
+				<a href="" class="product-item">
+					<img src="images/pro05.png" />
+					<h2>侧柄壶</h2>
+					<h2>大中和典</h2>
+					<p>RMB 1880</p>
+				</a>
+				<a href="" class="product-item">
+					<img src="images/pro06.png" />
+					<h2>侧柄壶</h2>
+					<h2>大中和典</h2>
+					<p>RMB 1880</p>
+				</a>
+				<a href="" class="product-item">
+					<img src="images/pro07.png" />
+					<h2>花器</h2>
+					<h2>大中和典</h2>
+					<p>RMB 1280</p>
+				</a>
+				<a href="" class="product-item">
+					<img src="images/pro08.png" />
+					<h2>花器</h2>
+					<h2>大中和典</h2>
+					<p>RMB 880</p>
+				</a>
+				<a href="" class="product-item">
+					<img src="images/pro09.png" />
+					<h2>花器</h2>
+					<h2>大中和典</h2>
+					<p>RMB 1180</p>
+				</a>
+				<a href="" class="product-item">
+					<img src="images/pro10.png" />
+					<h2>片口</h2>
+					<h2>大中和典</h2>
+					<p>RMB 880</p>
+				</a>
+				<a href="" class="product-item">
+					<img src="images/pro11.png" />
+					<h2>荞麦猪口</h2>
+					<h2>大中和典</h2>
+					<p>RMB 420</p>
+				</a>
+				<a href="" class="product-item">
+					<img src="images/pro12.png" />
+					<h2>蕎麦猪口</h2>
+					<h2>大中和典</h2>
+					<p>RMB 420</p>
+				</a>
+			</div>
+			<a href="" class="m-more">查看所有商品</a>
+		</div>
+		<!-- yb-product end -->
+
+		<!-- footer start -->
+		<div class="footer">
+			<div class="ft-1">
+				<h6>元白网店客服热线</h6>
+				<p>T / 0571 89978779</p>
+			</div>
+			<div class="ft-2">
+				<h6>元白和创园展厅</h6>
+				<p>杭州市西湖区留和路139号东信和创园31栋</p>
+				<h6>元白西湖店</h6>
+				<p>杭州市上城区将军路28号（将军路与延安南路交汇口）</p>
+				<h6>元白网络商店24小时全时段营业</h6>
+				<p>客服时间：周一至周五，10点至18点，客服邮箱：yuanbai_service@126.com。</p>
+			</div>
+		</div>
+		<!-- footer end -->
 	</body>
 </html>
